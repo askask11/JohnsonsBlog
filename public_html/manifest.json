@@ -1,0 +1,25 @@
+{
+  "name": "Johnson's Blog",
+  "short_name": "GaoGato",
+  "icons": [{
+    "src": "images/rabbit128.png",
+      "sizes": "128x128",
+      "type": "image/png"
+    }, {
+      "src": "images/rabbit192.png",
+      "sizes": "192x192",
+      "type": "image/png"
+    }, {
+      "src": "images/rabbit32.png",
+      "sizes": "32x32",
+      "type": "image/png"
+    }, {
+      "src": "images/rabbit512.png",
+      "sizes": "512x512",
+      "type": "image/png"
+    }],
+  "start_url": "index.html",
+  "display": "standalone",
+  "background_color": "#ff9999",
+  "theme_color": "#663300"
+}

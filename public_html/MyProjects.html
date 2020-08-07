@@ -1,0 +1,155 @@
+<!DOCTYPE html>
+<!--Editor: Johnson Gao
+Date This Project Created:2020/1/10
+Description Of This Class:This is a page to show the projects I've done before.
+-->
+<html>
+    <head>
+        <title>Some Of My Projects</title>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <link href="css/style.css" type="text/css" rel="stylesheet">
+        <!--link to the script-->
+        <script src="js/js.js"></script>
+    </head>
+    
+    <body id="previousPageBodyID" onload="initalizeStandard();">
+        <hgroup>
+            <h1 class="centerText centralized block" >My Projects</h1>
+            <h4>
+                To view my projects, please click on it.
+            </h4>
+        </hgroup>
+        <nav>
+            <!--Navigational Bar-->
+            <table class='navigationalBar'>
+                <tr>
+                    <td onclick="switchPage('index.html');">
+                        <img src="images/rabbit32.svg" alt="rabbit32"/>
+                        About Me
+                    </td>
+                    <td onclick="switchPage('BahamasTrip.html');">
+                        <img src="images/sight32.svg" alt="sight32"/>
+                        My Recent Trip
+                    </td>
+                    <td onclick="switchPage('MyProjects.html');" class="current">
+                        <img src="images/bird32.svg" alt="bird32"/>
+                        My Past Projects
+                    </td>
+                    <td>
+                        <!--An invisible popup that jumps out when user hover on it.-->
+                        <div class="popup">
+                            <img src="images/musicico32.svg" alt="musicico32" onmouseover="togglePupup('musicSettingIndex');"/>
+                            <div class="popupArea" id="musicSettingIndex">
+                                <img src="images/x16.svg" alt="x16" class="rightFloat" onclick="togglePupup('musicSettingIndex');"/>
+                                <table>
+                                    <tr>
+                                        <td>
+                                            Background Music:
+                                        </td>
+                                        <td>
+                                            <div class="musicControlArea"></div>
+                                        </td>
+                                    </tr>
+                                    <tr>
+                                        <td>
+                                            Clips:
+                                        </td>
+                                        <td onclick="mute_unmute();">
+                                            <!--Mute/unmute-->
+                                            <img id="doPlayClipIcon" src="images/loudsound32.svg" alt="loudsound" />
+                                        </td>
+                                    </tr>
+                                </table>
+
+                                <button class="arrowbutton" onclick="document.getElementById('musicList').classList.toggle('hide');">
+                                    Show the list
+                                </button>
+
+                                <ul class="starredList hide" id="musicList">
+                                    <!--Music List-->
+                                </ul>
+                                Note: music may not be available when off-line.
+                            </div>
+                        </div>
+                    </td>
+                </tr>
+            </table>
+        </nav>
+        <!--A table displays my project-->
+        <table id='projectsDisplayTable'>
+            <!--Header-->
+            <thead>
+                <tr>
+                    <th></th>
+                    <th></th>
+                    <th></th>
+                </tr>
+            </thead>
+
+            <tbody>
+                <tr>
+                    <td>
+                        <figure>
+                            <!--Description image-->
+                            <img src="images/chemcats.png" alt="" class="showcaseImage" title="click to view" onclick="window.open('http://www.villagechemcats.com');">
+                            <figcaption>
+                                <!--Description-->
+                                <h4><img src='images/smrdflag.svg' alt='flag'>Introduction:</h4>
+                                <p> A website for our chemistry class. It can do certain chem calculations. Learning chemistry is fun, try
+                                    this website.</p>
+                            </figcaption>
+                        </figure>
+                    </td>
+
+                    <!--Postcard exchanging-->
+                    <td>
+                        <figure>
+                            <img src="images/mail.jpeg" alt="mail image" class="showcaseImage clickable" title="click to visit!" onclick="window.open('http://postcards.villagechemcats.com');">
+                            <figcaption>
+                                <h4><img src='images/smrdflag.svg' alt='flag'>Introduction:</h4>
+                                This is a website simply introducing about postcards exchanging.
+                            </figcaption>
+                        </figure>
+                    </td>
+
+                    <td><!--Show grade system-->
+                        <figure>
+                            <img src="images/canvas-by-instructure-logo_fbb.gif" class="clickable block centralized" alt="lucky canvas" title="click to view" onclick="window.open('https://thevillageschool.instructure.com');" id='luckyCanvasImage'/>
+                            <figcaption>
+                                <h4><img src='images/smrdflag.svg' alt='flag'>Introduction:</h4>
+                                <p>This is a canvas show grade with amaination system. You need to be able to log into your canvas in order to use this application. It can give you live reaction with showing your grade, so don't be nervous when you see "assignment graded", just use my application!
+                                By the way, you need to install the application first using a chrome extention called 
+                                "tempermonkey".</p><br>
+                                Guide to installation.
+                            </figcaption>
+                        </figure>
+                    </td>
+                </tr>
+                <!--Dorm(hided)-->
+                <tr class="hide">
+                    <td>
+                        <figure>
+                            <!--like to img: https://fontmeme.com/permalink/200111/e3c79a5d2aa11ead6970dd5c29b960c7.png-->
+                            <img src="" alt="res life image" class="showcaseImage clickable" title="click to view" onclick="window.open('http://novillagereslife.villagechemcats.com');" />
+                            <figcaption>
+                                A website about the dorm.
+                            </figcaption>
+                        </figure>
+                    </td>
+                    <td></td>
+                    <td></td>
+                </tr>
+            </tbody>
+        </table>
+
+        <!--footer-->
+        <hr>
+        <footer>
+            <div class="centerText centralized">
+                Made By: Jianqing Gao<br>
+                Teacher: Mr.Ansari/Ms.Nanda
+            </div>
+        </footer>
+    </body>
+</html>

@@ -1,0 +1,116 @@
+<!DOCTYPE html>
+<!--Editor: Johnson Gao
+Date This Project Created:2020-1-8
+Description Of This Class: This is the website for mytrips. Showing my trips to the Bahamas.
+-->
+<html>
+    <head>
+        <title>我的旅程My Trips</title>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <link href="css/style.css" type="text/css" rel="stylesheet">
+        <script src="js/js.js"></script>
+    </head>
+    <body onload="initalizeStandard();">
+        <!--A navigational bar to guide user.-->
+     <nav>
+            <table class='navigationalBar'>
+                <tr>
+                    <td class='' onclick="switchPage('index.html');">
+                        <img src="images/rabbit32.svg" alt="rabbit32"/>
+                        About Me
+                    </td>
+                    <td class="current">
+                        <img src="images/sight32.svg" alt="sight32"/>
+                        My Recent Trip
+                    </td>
+                    <td onclick="switchPage('MyProjects.html');">
+                        <img src="images/bird32.svg" alt="bird32"/>
+                        My Past Projects
+                    </td>
+                    <td>
+                        <div class="popup">
+                            <img src="images/musicico32.svg" alt="musicico32" onmouseover="togglePupup('musicSettingIndex');"/>
+                            <div class="popupArea" id="musicSettingIndex">
+                                <img src="images/x16.svg" alt="x16" class="rightFloat" onclick="togglePupup('musicSettingIndex');"/>
+                                <table>
+                                    <tr>
+                                        <td>
+                                            Background Music:
+                                        </td>
+                                        <td>
+                                            <div class="musicControlArea"></div>
+                                        </td>
+                                    </tr>
+                                    <tr>
+                                        <td>
+                                            Clips:
+                                        </td>
+                                        <td onclick="mute_unmute();">
+                                            <!--Mute/unmute-->
+                                            <img id="doPlayClipIcon" src="images/loudsound32.svg" alt="loudsound" />
+                                        </td>
+                                    </tr>
+                                </table>
+                                
+                                <button class="arrowbutton" onclick="document.getElementById('musicList').classList.toggle('hide');">
+                                    Show the list
+                                </button>
+                                
+                                <ul class="starredList hide" id="musicList">
+                                    <!--Music List-->
+                                    
+                                </ul>
+                                Note: music may not be available when off-line.
+                            </div>
+                        </div>
+                    </td>
+                </tr>
+            </table>
+        </nav>
+        <div id="title"><img src="images/xc.PNG" alt="我的行程"><img src="images/mytrips.png" alt="myTrips"></div>
+        <!--User select bar-->
+        <table cellspacing="25" id="videoTable">
+            <tbody>
+                <tr>
+                    <td>
+                        <button class="selectionButton" onclick="switchDayVideo(1)">
+                            Day 1<br>第一天
+                        </button>
+                    </td>
+                    <td>
+                        <button class="selectionButton" onclick="switchDayVideo(2)">
+                            Day 2<br>第二天
+                        </button>
+                    </td>
+                    <td>
+                        <button class="selectionButton" onclick="switchDayVideo(3)">
+                            Day 3<br>第三天
+                        </button>
+                    </td>
+                    <td>
+                        <button class="selectionButton" onclick="switchDayVideo(4)">
+                            Day 4<br>第四天
+                        </button>
+                    </td>
+                </tr>
+            </tbody>
+        </table>
+        <section id="videoFrame">
+            
+            <!--The video frame show user video. Call bilibili api so China Mainland can access this website.-->
+            <iframe  id="videoIframe" src="" scrolling="no" border="0" frameborder="no" framespacing="0" allowfullscreen="true"> </iframe>
+            <article id="intro">
+                <h4>
+                    <img src="images/smrdflag.svg" alt="flag">Introduction 介绍：
+                </h4>
+                
+                <!--This is a dynamic introduction paragraph.-->
+                <p id="introParag">
+                    
+                </p>
+            </article>
+        </section>
+        
+    </body>
+</html>

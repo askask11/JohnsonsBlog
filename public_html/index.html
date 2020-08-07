@@ -1,0 +1,242 @@
+<!DOCTYPE html>
+<!--Editor: Johnson Gao
+Date This Project Created:2020-1-8
+Description Of This Class: This is a page about myself. The introductory page faces users.
+-->
+<html>
+    <head>
+        <!--Title-->
+        <title>Johnson's Blog</title>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <link href="css/style.css" type="text/css" rel="stylesheet">
+
+        <!--Web mainfest support for PWA-->
+        <link rel="manifest" href="manifest.json">
+
+        <!--Add IOS bar support-->
+        <meta name="apple-mobile-web-app-capable" content="yes">
+        <meta name="apple-mobile-web-app-status-bar-style" content="black">
+        <meta name="apple-mobile-web-app-title" content="Johnson's Blog">
+        <link rel="apple-touch-icon" href="images/rabbit192.png">
+
+        <!--Website Description (SEO)-->
+        <meta name="description" content="This is Johnson's Personal blog">
+
+        <!--The head bar-->
+        <meta name="theme-color" content="#993300" />
+
+        <!--Main script for this application-->
+        <script src="js/js.js"></script>
+
+        <!-- <script src='service-worker.js'></script>-->
+        <!--Prompt user to install the application as the user is eligible for installation-->
+        <script src='js/install.js'></script>
+
+    </head>
+    <body id='aboutMeBody' onload="initalizeStandard(); registerServiceWorker();">
+        <!--Navigational Bar-->
+        <nav>
+            <table class='navigationalBar'>
+                <tr>
+                    <td class='current'>
+                        <img src="images/rabbit32.svg" alt="rabbit32"/>
+                        About Me
+                    </td>
+                    <td onclick="switchPage('BahamasTrip.html');">
+                        <img src="images/sight32.svg" alt="sight32"/>
+                        My Recent Trip
+                    </td>
+                    <td onclick="switchPage('MyProjects.html');">
+                        <img src="images/bird32.svg" alt="bird32"/>
+                        My Past Projects
+                    </td>
+                    <td class='hide' id='downloadTab' onclick='installPWA(event)'>
+                        <img src='images/download32.svg' alt='download32'/>
+                        Download App!
+                    </td>
+                    <td>
+                        <div class="popup">
+                            <img src="images/musicico32.svg" alt="musicico32" onmouseover="togglePupup('musicSettingIndex');"/>
+                            <div class="popupArea" id="musicSettingIndex">
+                                <img src="images/x16.svg" alt="x16" class="rightFloat" onclick="togglePupup('musicSettingIndex');"/>
+                                <table>
+                                    <tr>
+                                        <td>
+                                            Background Music:
+                                        </td>
+                                        <td>
+                                            <div class="musicControlArea"></div>
+                                        </td>
+                                    </tr>
+                                    <tr>
+                                        <td>
+                                            Clips:
+                                        </td>
+                                        <td onclick="mute_unmute();">
+                                            <!--Mute/unmute-->
+                                            <img id="doPlayClipIcon" src="images/loudsound32.svg" alt="loudsound" />
+                                        </td>
+                                    </tr>
+                                </table>
+
+                                <button class="arrowbutton" onclick="document.getElementById('musicList').classList.toggle('hide');">
+                                    Show the list
+                                </button>
+
+                                <ul class="starredList hide" id="musicList">
+                                    <!--Music List-->
+
+                                </ul>
+                                Note: music may not be available when off-line.
+                            </div>
+                        </div>
+                    </td>
+                </tr>
+            </table>
+        </nav>
+
+        <header class='centralized centerText'>
+            <hgroup>
+                <h1>
+                    Johnson's Blog
+                </h1>
+                <h3>
+                    <img src="images/smrdflag.svg" alt="smrdflag"/>
+                    Hallo everyone, welcome to my blog.
+                </h3>
+            </hgroup>
+        </header>
+
+        <!--Asks how user f-->
+        <article class='centralized' id='feelingSection'>
+            <h4>
+                How are you feeling today?
+            </h4>
+            <!--Let user choose their feeling.More responsive.-->
+            <table class='centralized' id='feelingChoosingArea'>
+                <tr>
+                    <td>
+                        <img src="images/smile.svg" alt="smile" class='clickable' id="goodimg" onclick="document.getElementById('feelingChoosingArea').innerHTML = '<strong>good for you!</strong>';document.getElementById('feelingChoosingArea').style.setProperty('color', 'green'); PLAY_CLIP.waterpress1();"/>
+                    </td>
+                    <td>
+                        <img src="images/nutral.svg" alt="nutral" class='clickable' id="sosoimg" onclick="document.getElementById('feelingChoosingArea').innerHTML = ' <strong>hope you feel better!</strong>';document.getElementById('feelingChoosingArea').style.setProperty('color', 'orange');PLAY_CLIP.waterpress1();"/>
+                    </td>
+                    <td>
+                        <img src="images/notgood.svg" alt="notgood" class='clickable' id="badimg" onclick="document.getElementById('feelingChoosingArea').innerHTML = '<strong>Oh no. what happened? Please feel better!</strong>';document.getElementById('feelingChoosingArea').style.setProperty('color', 'red');PLAY_CLIP.waterpress1();"  >
+                    </td>
+                </tr>
+            </table>
+
+            <!--respond to feeling-->
+
+        </article>
+
+        <section class='centralized' id='aboutMeSection'>
+            <h4>
+                <!--Header-->
+                Something About Me
+            </h4>
+            <table class='centralized'>
+                <tr>
+                    <td>
+                        <!--Display text info-->
+                        <div class='centralized'>
+                            <h5>
+                                Basic Information
+                            </h5>
+                            <ul class='starredList'>
+                                <!--Age/Birthday-->
+                                <li>
+                                    Birthday: 2003-04-08, I am <span id='myAge'>16</span> years old now!
+                                </li>
+                                <li>
+                                    <!--My school-->
+                                    I am studying in the village school.
+                                    <!--future map api-->
+                                </li>
+                                <li>
+                                    <!--Origin-->
+                                    I come from China.
+                                </li>
+                            </ul>
+                        </div>
+                    </td>
+                    <td>
+                        <!--My photo-->
+                        <img id='interestPhoto' src='images/ccytz.png' alt='ccytz'>
+                    </td>
+                </tr>
+            </table>
+        </section>
+
+        <section class='centralized' id='myHobbiesSec'>
+            <h4>
+                My Hobbies / Things I like
+            </h4>
+
+            I like to try variety of things. Here are some things I like best.
+
+            <!--When user hovers it the image changes-->
+            <table>
+                <tr>
+                    <td>
+                        <ul class='starredList'>
+                            <li>
+                                <u onmouseover="changeinterestImage('images/intconpsci.jpg')">(Best!)Computer Science</u>
+                            </li>
+                            <li>
+                                <u onmouseover="changeinterestImage('images/intiii.jpg')">Postcard Exchanging</u> 
+                            </li>
+                            <li>
+                                <u onmouseover="changeinterestImage('images/860_AT_guitar_acoustics.png')">Guitar/Music</u>
+                            </li>
+
+                        </ul>
+                    </td>
+                    <td id="myIntImgContainer">
+                        <!--Related Photo here, dynamic using javascript-->
+                        <img id="myintImg" src="" class="" alt="" align="">
+                    </td>
+                </tr>
+            </table>
+
+
+            <button class='rightFloat arrowbutton' onclick="window.open('mailto:jianqing_gao@s.thevillageschool.com');">
+                <span>Also Interested?</span>
+            </button>
+        </section>
+
+
+        <section class='centralized' id='thingsWkOnSec'>
+            <h4>
+                Things I'm Working On
+            </h4>
+            <div class='centralized'>
+                <ul class='starredList'>
+                    <li>
+                        Get out of the dorm......
+                    </li>
+                    <li>
+                        My Classes.. Many things.
+                    </li>
+                    <li>
+                        I like to sleep <strong>except</strong> at night. ...
+                    </li>
+                </ul>
+            </div>
+        </section>
+        <br><br><br>
+        <footer class='centralized centerText'>
+            Thank you for visiting my website!
+        </footer>
+
+
+        <!--Service Worker Registeration-->
+        <div id='registerServiceWorker'>
+
+        </div>
+
+
+    </body>
+</html>
