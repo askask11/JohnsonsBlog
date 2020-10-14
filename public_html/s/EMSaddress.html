@@ -1,0 +1,146 @@
+<!DOCTYPE html>
+<!--
+Author: jianqing
+Date: Sep 5, 2020
+Description: This document is created for
+-->
+<html>
+    <head>
+        <title>我的转运地址</title>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.0/umd/popper.min.js"></script>
+        <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+        <script>
+            function fallbackCopyTextToClipboard(text) {
+                var textArea = document.createElement("textarea");
+                textArea.value = text;
+
+                // Avoid scrolling to bottom
+                textArea.style.top = "0";
+                textArea.style.left = "0";
+                textArea.style.position = "fixed";
+
+                document.body.appendChild(textArea);
+                textArea.focus();
+                textArea.select();
+
+                try {
+                    var successful = document.execCommand('copy');
+                    var msg = successful ? 'successful' : 'unsuccessful';
+                    console.log('Fallback: Copying text command was ' + msg);
+                } catch (err) {
+                    console.error('Fallback: Oops, unable to copy', err);
+                }
+
+                document.body.removeChild(textArea);
+            }
+
+            function copyText(text) {
+                if (!navigator.clipboard) {
+                    fallbackCopyTextToClipboard(text);
+                    return;
+                }
+                navigator.clipboard.writeText(text).then(function () {
+                    console.log('Async: Copying to clipboard was successful!');
+                }, function (err) {
+                    console.error('Async: Could not copy text: ', err);
+                });
+            }
+        </script>
+    </head>
+    <body class="text-center">
+        <div class="jumbotron">
+        <h1>
+            EMS转运地址
+        </h1>
+            <h4>
+                点击复制按钮复制。
+            </h4>
+        </div>
+        <table class="table table-striped">
+            <tr>
+                <td>
+                    名(First name)
+                </td>
+                <td>
+                    RQLCT
+                </td>
+                <td>
+                    <button class="btn btn-primary" onclick="copyText('RQLCT');" data-toggle="popover" data-content="&#128515; 已复制,现在去粘贴吧！" data-trigger="focus"  type="button">复制</button>
+                </td>
+
+               
+            </tr>
+            <tr>
+                <td>
+                    姓(Last name)
+                </td>
+                <td>
+                    ZYHWG
+                </td>
+                <td>
+                    <button class="btn btn-primary" data-toggle="popover" data-content="&#128515; 已复制,现在去粘贴吧！" data-trigger="focus"   onclick="copyText('ZYHWG')">复制</button>
+                </td>
+
+            </tr>
+            <tr>
+                <td>
+                    海外仓库地址(Address1)
+                </td>
+                <td>
+                    401 MARSH LN STE 10
+                </td>
+                <td>
+                    <button class="btn btn-primary" data-toggle="popover" data-content="&#128515; 已复制,现在去粘贴吧！" data-trigger="focus"   onclick="copyText('401 MARSH LN STE 10')">复制</button>
+                </td>
+
+            </tr>
+            <tr>
+                <td>
+                    国家
+                </td>
+                <td>
+                    US
+                </td>
+                <td>
+                    <button class="btn btn-primary" data-toggle="popover" data-content="&#128515; 已复制,现在去粘贴吧！" data-trigger="focus"   onclick="copyText('US');">复制</button>
+                </td>
+
+            </tr>
+            <tr>
+                <td>
+                    邮编(Zip Code)
+                </td>
+                <td>
+                    19804-2491
+                </td>
+                <td>
+                    <button class="btn btn-primary" data-toggle="popover" data-content="&#128515; 已复制,现在去粘贴吧！" data-trigger="focus"   onclick="copyText('19804-2491');">复制</button>
+                </td>
+
+            </tr>
+            <tr>
+                <td>
+                    电话(Tel)
+                </td>
+                <td>
+                    7327438377
+                </td>
+                <td>
+                    <button class="btn btn-primary" data-toggle="popover" data-content="&#128515; 已复制,现在去粘贴吧！" data-trigger="focus"   onclick="copyText('7327438377');">复制</button>
+                </td>
+
+            </tr>
+
+        </table>
+        <script>
+            $(document).ready(function () {
+                $('[data-toggle="popover"]').popover();
+            });
+        </script>
+    </body>
+    
+</html>

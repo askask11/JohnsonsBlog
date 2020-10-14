@@ -35,19 +35,21 @@ const CLIP_TINGBUTTON = "https://hidrive.ionos.com/api/sharelink/download?id=nWY
 
 const CLIP_WATERPRESS1 = "https://hidrive.ionos.com/api/sharelink/download?id=2B4OW4OQ";
 
-const MUSIC_SRC_GENERAL = [new Music("https://hidrive.ionos.com/api/sharelink/download?id=CX4uWBED", "Love Circulation - Piano"), //
-    new Music("https://hidrive.ionos.com/api/sharelink/download?id=Iq4OWnRp", "Annie's dream"), //
-    new Music("https://hidrive.ionos.com/api/sharelink/download?id=GN4O2sIg", "500 miles"),
+const MUSIC_SRC_GENERAL = [new Music("https://server.1000classes.com/bmcserver/attachment/2020-08/80d8a57ebfde44f6bc1d1a7065a3ac11.mp3", "Love Circulation - Piano"), //https://hidrive.ionos.com/api/sharelink/download?id=CX4uWBED
+    new Music("https://server.1000classes.com/bmcserver/attachment/2020-08/e150eb69558a46e49e0a61x4708a220cd.mp3", "Annie's dream"), //https://hidrive.ionos.com/api/sharelink/download?id=Iq4OWnRp
+
+    new Music("https://server.1000classes.com/bmcserver/attachment/2020-08/32a63ef24c174513bbb9924fe2da1949.wav", "500 miles"),
+    //https://hidrive.ionos.com/api/sharelink/download?id=GN4O2sIg 500 miles
     // new Music("audios/see you again video (mp3cut.net).wav", "see you again"),
-    new Music("https://hidrive.ionos.com/api/sharelink/download?id=BN4uWBqw", "Senorita"),
-    new Music("https://hidrive.ionos.com/api/sharelink/download?id=AF4uWjJ2", "Always With Me - Piano"), 
-    new Music("https://hidrive.ionos.com/api/sharelink/download?id=PQYOWPEP", "宁夏"), /*nxpiano*/
-    new Music("https://hidrive.ionos.com/api/sharelink/download?id=T1Yu24ty", "环游星空"), /*hyxk.mp3*/
-    new Music("https://hidrive.ionos.com/api/sharelink/download?id=KdYu2QPB", "静悄悄 - 封茗囧菌"),
-    new Music("https://hidrive.ionos.com/api/sharelink/download?id=KzYuWWye", "那些年"),
-    new Music("https://hidrive.ionos.com/api/sharelink/download?id=CIYOWlZn", "好想你"), /*hxn.mp3*/
-    new Music("https://hidrive.ionos.com/api/sharelink/download?id=yEYOWEWv", "樱花草 钢琴版"),
-    new Music("https://hidrive.ionos.com/api/sharelink/download?id=LA4uWDnI", "贝壳风铃")];//always with me.mp3
+    new Music("https://server.1000classes.com/bmcserver/attachment/2020-08/8ff36eca82834c0fa1a0f7e9959bb377.mp3", "Senorita"), //https://hidrive.ionos.com/api/sharelink/download?id=BN4uWBqw
+    new Music("https://server.1000classes.com/bmcserver/attachment/2020-08/99b3f2d7e0414fd59e4299187a3ab3e9.mp3", "Always With Me - Piano"), //https://hidrive.ionos.com/api/sharelink/download?id=AF4uWjJ2
+    new Music("https://server.1000classes.com/bmcserver/attachment/2020-08/11d4752c30ae4e9688abac7c865c1ab6.mp3", "宁夏"), /*nxpiano*///https://hidrive.ionos.com/api/sharelink/download?id=PQYOWPEP
+    new Music("https://server.1000classes.com/bmcserver/attachment/2020-08/a3d721e3eb9746018725d4bc9fed2f40.mp3", "环游星空"), /*hyxk.mp3*/ //https://hidrive.ionos.com/api/sharelink/download?id=T1Yu24ty
+    new Music("https://server.1000classes.com/bmcserver/attachment/2020-08/0cc1b71574e94900a8d402d00f43db47.mp3", "静悄悄 - 封茗囧菌"), //https://hidrive.ionos.com/api/sharelink/download?id=KdYu2QPB
+    new Music("https://server.1000classes.com/bmcserver/attachment/2020-08/1dca26c6c9cf4bf6b1757bb2474014d5.mp3", "那些年"), //https://hidrive.ionos.com/api/sharelink/download?id=KzYuWWye
+    new Music("https://server.1000classes.com/bmcserver/attachment/2020-08/927cbded7fa94891b07b535b697c864e.mp3", "好想你"), /*hxn.mp3*///https://hidrive.ionos.com/api/sharelink/download?id=CIYOWlZn
+    new Music("https://server.1000classes.com/bmcserver/attachment/2020-08/7d616ea4055d4e228153bcead433af14.mp3", "樱花草 钢琴版"), //https://hidrive.ionos.com/api/sharelink/download?id=yEYOWEWv
+    new Music("https://server.1000classes.com/bmcserver/attachment/2020-08/2ec23417902b4384b66a4c863172c54b.mp3", "贝壳风铃")];//https://hidrive.ionos.com/api/sharelink/download?id=LA4uWDnI
 
 //https://hidrive.ionos.com/api/sharelink/download?id=KdYu2QPB
 /**
